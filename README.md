@@ -36,6 +36,12 @@ Download syntetic dataset
 gdown --folder https://drive.google.com/drive/folders/1_bhWWa9upUWwUs7ln8jaWG_bYxtxuOCt?usp=sharing -O data/.
 ```
 
+Download image dataset(optional)
+```
+gdown --folder https://drive.google.com/drive/folders/1Pok_sU_cK3RXZEpMfJb6SQIcCUfBjJhh?usp=sharing -O image_data/.
+```
+
+
 ## Running the visual demo
 
 ```

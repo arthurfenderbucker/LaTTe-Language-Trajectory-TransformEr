@@ -222,7 +222,10 @@ class Motion_refiner():
 
         if len(self.precomputed_obj_names_emb.keys()) > 0:
             # print("pre comp obj names features")
-            obj_names_features = np.array([self.precomputed_obj_names_emb[o] for o in obj_names])
+            try:
+                obj_names_features = np.array([self.precomputed_obj_names_emb[o] for o in obj_names])
+            except:
+                obj_names_features = self.get_clip_text_features(obj_names)
         else:
             obj_names_features = self.get_clip_text_features(obj_names)
         obj_names_features = obj_names_features.astype(np.float32)
@@ -541,7 +544,7 @@ class Motion_refiner():
     
     def apply_interaction(self, model, d, text,  label=False, images=None, dec_only=False):
         data_new = []
-        print("input",d["input_traj"].shape)
+        # print("input",d["input_traj"].shape)
 
         data_new.append({"input_traj": d["input_traj"], "output_traj": d["output_traj"], "text": text, "obj_names": d["obj_names"],
                         "obj_poses": d["obj_poses"],"locality_factor":d["locality_factor"],"image_paths":d["image_paths"]})
