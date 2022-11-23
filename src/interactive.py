@@ -618,14 +618,14 @@ print_help()
 
 if ros_enabled:
     rospy.init_node('draw_interface', anonymous=True)
-traj_pub = rospy.Publisher("/traj", Path)
+    traj_pub = rospy.Publisher("/traj", Path)
 
-real_traj_topic = "/cartesian_impedance_example_controller/equilibrium_pose"
-real_traj_pub = rospy.Publisher(real_traj_topic, PoseStamped)
+    real_traj_topic = "/cartesian_impedance_example_controller/equilibrium_pose"
+    real_traj_pub = rospy.Publisher(real_traj_topic, PoseStamped)
 
-new_traj_pub = rospy.Publisher("/new_traj", Path)
+    new_traj_pub = rospy.Publisher("/new_traj", Path)
 
-objs_pub = rospy.Publisher("/obj_poses", Path)
+    objs_pub = rospy.Publisher("/obj_poses", Path)
 
 
 if live_image:
@@ -636,7 +636,7 @@ if live_image:
     # bbox_sub = rospy.Subscriber("/franka_state_controller/franka_states",  FrankaState, franka_state_cb, di)
 
 
-while not rospy.is_shutdown():
+while (ros_enabled and not rospy.is_shutdown()) or (not ros_enabled):
     if live_image:
         data = rospy.wait_for_message(image_topic, Image)
         try:
@@ -662,7 +662,7 @@ while not rospy.is_shutdown():
     # modify_traj(mr, di)
     # traj, obj_poses, text, obj_names,obj_poses_offset = di.get_env()
     # publish_simple_traj(di.new_traj,obj_poses+obj_poses_offset, new_traj_pub, scale=1.0)
-    print(" ")
+    # print(" ")
     if k == 27:
         break
     elif k == ord("d"):

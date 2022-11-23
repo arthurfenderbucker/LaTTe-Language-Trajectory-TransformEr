@@ -31,10 +31,16 @@ Download models
 pip install gdown
 gdown --folder https://drive.google.com/drive/folders/1HQNwHlQUOPMnbPE-3wKpIb6GMBz5eqDg?usp=sharing -O models/.
 ```
-Download syntetic dataset
+Download synthetic dataset  
 ```
 gdown --folder https://drive.google.com/drive/folders/1_bhWWa9upUWwUs7ln8jaWG_bYxtxuOCt?usp=sharing -O data/.
 ```
+
+Download image dataset(optional)
+```
+gdown --folder https://drive.google.com/drive/folders/1Pok_sU_cK3RXZEpMfJb6SQIcCUfBjJhh?usp=sharing -O image_data/.
+```
+
 
 ## Running the visual demo
 
