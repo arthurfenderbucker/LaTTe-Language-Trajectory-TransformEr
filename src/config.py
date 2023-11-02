@@ -9,10 +9,10 @@ dims=4
 
 user_study_folder = "/home/arthur/local_data/user_study"
 
-base_folder = "/home/arthur/local_data/"
-data_folder = "/home/arthur/local_data/data/"
+base_folder = "/home/arthur/Desktop/projects/LaTTe-Language-Trajectory-TransformEr/"
+data_folder = "/home/arthur/Desktop/projects/LaTTe-Language-Trajectory-TransformEr/data/"
 # models_folder = "/home/arthur/data/models/"
-models_folder = "/home/arthur/local_data/models/"
+models_folder = "/home/arthur/Desktop/projects/LaTTe-Language-Trajectory-TransformEr/models/"
 
 # image_dataset_folder = "/home/arthur/data/image_dataset/"
 image_dataset_folder = "/home/arthur/image_dataset/"

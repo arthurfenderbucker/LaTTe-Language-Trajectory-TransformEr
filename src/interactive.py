@@ -36,7 +36,7 @@ print(pkg_path)
 
 
 parser = argparse.ArgumentParser(description='collect traj draw.')
-parser.add_argument('--ros', type=int, default=1)
+parser.add_argument('--ros', type=int, default=0)
 
 parser.add_argument('--name', type=str, default="user")
 parser.add_argument('--trial', type=int, default=1)
