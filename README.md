@@ -24,7 +24,6 @@ pip install git+https://github.com/openai/CLIP.git
 pip install opencv-python
 ```
 
-
 Download models
 
 ```
@@ -41,8 +40,16 @@ Download image dataset(optional)
 gdown --folder https://drive.google.com/drive/folders/1Pok_sU_cK3RXZEpMfJb6SQIcCUfBjJhh?usp=sharing -O image_data/.
 ```
 
+Configure the paths at [src/config.py](src/config.py) 
 
-## Running the visual demo
+## Animated demo
+
+follow the notebook [interactive_user_study.ipynb](interactive_user_study.ipynb)
+
+---
+---
+
+## Running the visual demo - Deprecate
 
 ```
 cd src
